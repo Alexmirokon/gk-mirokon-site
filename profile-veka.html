@@ -114,20 +114,6 @@
             margin: 0 auto 25px;
         }
 
-        /* ===== ОСНОВНОЕ СОДЕРЖАНИЕ ===== */
-        .profile-content {
-            padding: 50px 0;
-            background: #fff;
-        }
-        .profile-content h2 {
-            font-size: 1.6rem;
-            margin: 40px 0 15px;
-            color: #1e2a3a;
-        }
-        .profile-content h2:first-of-type {
-            margin-top: 0;
-        }
-
         /* ===== КАРТОЧКИ СЕРИЙ ===== */
         .series-grid {
             display: grid;
@@ -142,6 +128,8 @@
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid #e9ecef;
+            display: flex;
+            flex-direction: column;
         }
         .series-card:hover {
             transform: translateY(-5px);
@@ -150,10 +138,10 @@
         .series-card .series-img {
             width: 100%;
             max-width: 280px;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            margin: 0 auto 15px;
             background: #e9ecef;
             padding: 10px;
+            border-radius: 10px;
         }
         .series-card .series-img svg {
             display: block;
@@ -168,6 +156,7 @@
             color: #5a6a7a;
             font-size: 0.95rem;
             margin-bottom: 12px;
+            flex-grow: 1;
         }
         .series-card .chars {
             font-size: 0.85rem;
@@ -182,24 +171,9 @@
             margin: 3px;
             border: 1px solid #e9ecef;
         }
-
-        /* ===== ТАБЛИЦА ХАРАКТЕРИСТИК ===== */
-        .profile-content ul {
-            list-style: none;
-            padding: 0;
-        }
-        .profile-content ul li {
-            padding: 12px 0;
-            border-bottom: 1px solid #e9ecef;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        .profile-content ul li strong {
-            color: #1e2a3a;
-        }
-        .profile-content ul li span {
-            color: #5a6a7a;
+        .series-card .btn {
+            margin-top: auto;
+            align-self: center;
         }
 
         /* ===== МОДАЛЬНОЕ ОКНО ===== */
@@ -406,7 +380,7 @@
     </section>
 
     <!-- ===== КОНТЕНТ ===== -->
-    <section class="profile-content">
+    <section class="profile-content" style="padding: 50px 0; background: #fff;">
         <div class="container">
 
             <h2>Серии профиля <span style="color:#1e7e34;">VEKA</span></h2>
@@ -434,7 +408,7 @@
                     <div class="chars">
                         <span>3 камеры</span>
                         <span>58 мм</span>
-                        <span>до 32 мм стеклопакет</span>
+                        <span>до 32 мм</span>
                     </div>
                     <button class="btn" onclick="openModal('euroline')">Подробнее →</button>
                 </div>
@@ -461,7 +435,7 @@
                     <div class="chars">
                         <span>5 камер</span>
                         <span>70 мм</span>
-                        <span>до 42 мм стеклопакет</span>
+                        <span>до 42 мм</span>
                     </div>
                     <button class="btn" onclick="openModal('softline70')">Подробнее →</button>
                 </div>
@@ -489,29 +463,104 @@
                     <div class="chars">
                         <span>6-7 камер</span>
                         <span>82 мм</span>
-                        <span>до 52 мм стеклопакет</span>
+                        <span>до 52 мм</span>
                     </div>
                     <button class="btn" onclick="openModal('softline82')">Подробнее →</button>
                 </div>
 
+                <!-- VEKA WHS Halo 60 -->
+                <div class="series-card">
+                    <div class="series-img">
+                        <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="10" width="260" height="140" rx="8" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
+                            <rect x="30" y="30" width="220" height="100" rx="4" fill="#fff" stroke="#6c7a8a" stroke-width="1.5"/>
+                            <rect x="40" y="40" width="200" height="80" rx="2" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+                            <line x1="65" y1="40" x2="65" y2="120" stroke="#1e7e34" stroke-width="1.5" stroke-dasharray="2,3"/>
+                            <line x1="110" y1="40" x2="110" y2="120" stroke="#1e7e34" stroke-width="1.5" stroke-dasharray="2,3"/>
+                            <line x1="155" y1="40" x2="155" y2="120" stroke="#1e7e34" stroke-width="1.5" stroke-dasharray="2,3"/>
+                            <text x="140" y="80" font-size="13" fill="#6c7a8a" text-anchor="middle" font-weight="600">WHS Halo 60</text>
+                            <text x="140" y="100" font-size="10" fill="#adb5bd" text-anchor="middle">4 камеры</text>
+                            <line x1="30" y1="20" x2="30" y2="140" stroke="#1e7e34" stroke-width="2" stroke-dasharray="4,4"/>
+                            <line x1="250" y1="20" x2="250" y2="140" stroke="#1e7e34" stroke-width="2" stroke-dasharray="4,4"/>
+                            <text x="20" y="90" font-size="9" fill="#1e7e34" transform="rotate(-90,20,90)">60 мм</text>
+                        </svg>
+                    </div>
+                    <h3>VEKA WHS Halo 60</h3>
+                    <p>Современный профиль с 4 камерами для городских квартир</p>
+                    <div class="chars">
+                        <span>4 камеры</span>
+                        <span>60 мм</span>
+                        <span>до 32 мм</span>
+                    </div>
+                    <button class="btn" onclick="openModal('whs60')">Подробнее →</button>
+                </div>
+
+                <!-- VEKA WHS Halo 72 -->
+                <div class="series-card">
+                    <div class="series-img">
+                        <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="10" width="260" height="140" rx="8" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
+                            <rect x="30" y="30" width="220" height="100" rx="4" fill="#fff" stroke="#6c7a8a" stroke-width="1.5"/>
+                            <rect x="40" y="40" width="200" height="80" rx="2" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+                            <line x1="60" y1="40" x2="60" y2="120" stroke="#1e7e34" stroke-width="1.5" stroke-dasharray="2,3"/>
+                            <line x1="100" y1="40" x2="100" y2="120" stroke="#1e7e34" stroke-width="1.5" stroke-dasharray="2,3"/>
+                            <line x1="140" y1="40" x2="140" y2="120" stroke="#1e7e34" stroke-width="1.5" stroke-dasharray="2,3"/>
+                            <line x1="180" y1="40" x2="180" y2="120" stroke="#1e7e34" stroke-width="1.5" stroke-dasharray="2,3"/>
+                            <text x="140" y="80" font-size="13" fill="#6c7a8a" text-anchor="middle" font-weight="600">WHS Halo 72</text>
+                            <text x="140" y="100" font-size="10" fill="#adb5bd" text-anchor="middle">5 камер</text>
+                            <line x1="30" y1="20" x2="30" y2="140" stroke="#1e7e34" stroke-width="2" stroke-dasharray="4,4"/>
+                            <line x1="250" y1="20" x2="250" y2="140" stroke="#1e7e34" stroke-width="2" stroke-dasharray="4,4"/>
+                            <text x="20" y="90" font-size="9" fill="#1e7e34" transform="rotate(-90,20,90)">72 мм</text>
+                        </svg>
+                    </div>
+                    <h3>VEKA WHS Halo 72</h3>
+                    <p>Пятикамерный профиль для повышенной теплоизоляции</p>
+                    <div class="chars">
+                        <span>5 камер</span>
+                        <span>72 мм</span>
+                        <span>до 44 мм</span>
+                    </div>
+                    <button class="btn" onclick="openModal('whs72')">Подробнее →</button>
+                </div>
+
             </div>
 
-            <h2>Технические характеристики профиля VEKA</h2>
-            <ul>
-                <li><strong>Производство</strong> <span>Германия</span></li>
-                <li><strong>Количество камер</strong> <span>от 3 до 7</span></li>
-                <li><strong>Монтажная ширина</strong> <span>58–82 мм</span></li>
-                <li><strong>Толщина стеклопакета</strong> <span>до 52 мм</span></li>
-                <li><strong>Количество контуров уплотнения</strong> <span>2–3</span></li>
-                <li><strong>Исполнение</strong> <span>белое, цветное, серебро в массе</span></li>
+            <h2 style="margin-top:40px;">Общие технические характеристики профиля VEKA</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <strong>Производство</strong> <span>Германия</span>
+                </li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <strong>Количество камер</strong> <span>от 3 до 7</span>
+                </li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <strong>Монтажная ширина</strong> <span>58–82 мм</span>
+                </li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <strong>Толщина стеклопакета</strong> <span>до 52 мм</span>
+                </li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <strong>Количество контуров уплотнения</strong> <span>2–3</span>
+                </li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <strong>Исполнение</strong> <span>белое, цветное, серый в массе</span>
+                </li>
             </ul>
 
-            <h2>Цена на окна VEKA</h2>
-            <ul>
-                <li><strong>Одностворчатое окно</strong> <span>от 11 000 ₽</span></li>
-                <li><strong>Двустворчатое окно</strong> <span>от 16 500 ₽</span></li>
-                <li><strong>Трёхстворчатое окно</strong> <span>от 26 000 ₽</span></li>
-                <li><strong>Балконный блок</strong> <span>от 25 000 ₽</span></li>
+            <h2 style="margin-top:40px;">Цена на окна VEKA</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <strong>Одностворчатое окно</strong> <span>от 11 000 ₽</span>
+                </li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <strong>Двустворчатое окно</strong> <span>от 16 500 ₽</span>
+                </li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <strong>Трёхстворчатое окно</strong> <span>от 26 000 ₽</span>
+                </li>
+                <li style="padding: 12px 0; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <strong>Балконный блок</strong> <span>от 25 000 ₽</span>
+                </li>
             </ul>
             <p style="margin-top:10px; color:#5a6a7a;">* Цена зависит от размера, серии профиля и комплектации. Точную стоимость рассчитает наш замерщик.</p>
 
@@ -553,7 +602,7 @@
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // Данные для каждой серии
+        // Данные для каждой серии (обновлены по данным с https://gk-mirokon.ru/profile)
         const seriesData = {
             euroline: {
                 title: 'VEKA Euroline',
@@ -561,38 +610,61 @@
                 chars: {
                     'Количество камер': '3',
                     'Монтажная ширина': '58 мм',
-                    'Толщина стеклопакета': 'до 32 мм',
+                    'Толщина стеклопакета': 'от 4 до 32 мм',
                     'Исполнение': 'белое, цветное',
                     'Цвет уплотнений': 'черный, серый',
+                    'Ширина комбинации рама-створка': '113 мм',
                     'Количество контуров уплотнения': '2'
-                },
-                price: 'от 11 000 ₽ за одностворчатое окно'
+                }
             },
             softline70: {
                 title: 'VEKA Softline 70',
-                description: 'Энергоэффективный профиль с 5 камерами. Обеспечивает высокую тепло- и шумоизоляцию для комфортного проживания.',
+                description: 'Энергоэффективный профиль с 5 камерами. Обеспечивает высокую тепло- и шумоизоляцию.',
                 chars: {
                     'Количество камер': '5',
                     'Монтажная ширина': '70 мм',
-                    'Толщина стеклопакета': 'до 42 мм',
+                    'Толщина стеклопакета': 'от 4 до 42 мм',
                     'Исполнение': 'белое, цветное',
                     'Цвет уплотнений': 'черный, серый',
-                    'Количество контуров уплотнения': '2'
-                },
-                price: 'от 13 500 ₽ за одностворчатое окно'
+                    'Ширина комбинации рама-створка': '118 мм'
+                }
             },
             softline82: {
                 title: 'VEKA Softline 82',
-                description: 'Премиальный профиль с максимальной тепло- и шумоизоляцией. Идеальное решение для домов в шумных районах и с суровыми зимами.',
+                description: 'Премиальный профиль с максимальной тепло- и шумоизоляцией. Идеальное решение для домов в шумных районах.',
                 chars: {
-                    'Количество камер': '6-7',
+                    'Количество камер': 'рама 7 / створка 6',
                     'Монтажная ширина': '82 мм',
-                    'Толщина стеклопакета': 'до 52 мм',
+                    'Толщина стеклопакета': 'от 24 до 52 мм',
                     'Исполнение': 'белое, цветное',
                     'Цвет уплотнений': 'черный, серый',
+                    'Ширина комбинации рама-створка': '124 мм',
                     'Количество контуров уплотнения': '3'
-                },
-                price: 'от 17 000 ₽ за одностворчатое окно'
+                }
+            },
+            whs60: {
+                title: 'VEKA WHS Halo 60',
+                description: 'Современный 4-камерный профиль для городских квартир. Хороший баланс цены и энергоэффективности.',
+                chars: {
+                    'Количество камер': '4',
+                    'Монтажная ширина': '60 мм',
+                    'Толщина стеклопакета': 'от 4 до 32 мм',
+                    'Исполнение': 'белое, цветное',
+                    'Цвет уплотнений': 'серый',
+                    'Количество контуров уплотнения': '2'
+                }
+            },
+            whs72: {
+                title: 'VEKA WHS Halo 72',
+                description: 'Пятикамерный профиль для повышенной теплоизоляции. Отличный выбор для регионов с холодными зимами.',
+                chars: {
+                    'Количество камер': '5',
+                    'Монтажная ширина': '72 мм',
+                    'Толщина стеклопакета': 'от 24 до 44 мм',
+                    'Исполнение': 'белое, цветное',
+                    'Цвет уплотнений': 'серый',
+                    'Количество контуров уплотнения': '2'
+                }
             }
         };
 
@@ -613,77 +685,15 @@
             // Генерируем SVG-изображение в разрезе для каждой серии
             let svgImg = '';
             if (seriesKey === 'euroline') {
-                svgImg = `
-                    <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:10px;">
-                        <rect x="10" y="10" width="480" height="280" rx="12" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
-                        <rect x="50" y="50" width="400" height="200" rx="6" fill="#fff" stroke="#6c7a8a" stroke-width="2"/>
-                        <rect x="70" y="70" width="360" height="160" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
-                        <text x="250" y="130" font-size="24" fill="#1e2a3a" text-anchor="middle" font-weight="700">VEKA Euroline</text>
-                        <text x="250" y="165" font-size="16" fill="#6c7a8a" text-anchor="middle">3-камерный профиль</text>
-                        <text x="250" y="195" font-size="14" fill="#adb5bd" text-anchor="middle">Монтажная ширина 58 мм</text>
-                        <line x1="50" y1="30" x2="50" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/>
-                        <line x1="450" y1="30" x2="450" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/>
-                        <text x="30" y="160" font-size="14" fill="#1e7e34" font-weight="600" transform="rotate(-90,30,160)">58 мм</text>
-                        <rect x="90" y="90" width="40" height="120" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="150" y="90" width="40" height="120" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="210" y="90" width="40" height="120" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <text x="110" y="165" font-size="10" fill="#6c7a8a" text-anchor="middle">1</text>
-                        <text x="170" y="165" font-size="10" fill="#6c7a8a" text-anchor="middle">2</text>
-                        <text x="230" y="165" font-size="10" fill="#6c7a8a" text-anchor="middle">3</text>
-                    </svg>
-                `;
+                svgImg = `<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:10px;"><rect x="10" y="10" width="480" height="280" rx="12" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/><rect x="50" y="50" width="400" height="200" rx="6" fill="#fff" stroke="#6c7a8a" stroke-width="2"/><rect x="70" y="70" width="360" height="160" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/><text x="250" y="130" font-size="24" fill="#1e2a3a" text-anchor="middle" font-weight="700">VEKA Euroline</text><text x="250" y="165" font-size="16" fill="#6c7a8a" text-anchor="middle">3-камерный профиль</text><text x="250" y="195" font-size="14" fill="#adb5bd" text-anchor="middle">Монтажная ширина 58 мм</text><line x1="50" y1="30" x2="50" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/><line x1="450" y1="30" x2="450" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/><text x="30" y="160" font-size="14" fill="#1e7e34" font-weight="600" transform="rotate(-90,30,160)">58 мм</text><rect x="90" y="90" width="40" height="120" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="150" y="90" width="40" height="120" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="210" y="90" width="40" height="120" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><text x="110" y="165" font-size="10" fill="#6c7a8a" text-anchor="middle">1</text><text x="170" y="165" font-size="10" fill="#6c7a8a" text-anchor="middle">2</text><text x="230" y="165" font-size="10" fill="#6c7a8a" text-anchor="middle">3</text></svg>`;
             } else if (seriesKey === 'softline70') {
-                svgImg = `
-                    <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:10px;">
-                        <rect x="10" y="10" width="480" height="280" rx="12" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
-                        <rect x="40" y="40" width="420" height="220" rx="6" fill="#fff" stroke="#6c7a8a" stroke-width="2"/>
-                        <rect x="60" y="60" width="380" height="180" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
-                        <text x="250" y="125" font-size="24" fill="#1e2a3a" text-anchor="middle" font-weight="700">VEKA Softline 70</text>
-                        <text x="250" y="160" font-size="16" fill="#6c7a8a" text-anchor="middle">5-камерный профиль</text>
-                        <text x="250" y="190" font-size="14" fill="#adb5bd" text-anchor="middle">Монтажная ширина 70 мм</text>
-                        <line x1="40" y1="30" x2="40" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/>
-                        <line x1="460" y1="30" x2="460" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/>
-                        <text x="20" y="160" font-size="14" fill="#1e7e34" font-weight="600" transform="rotate(-90,20,160)">70 мм</text>
-                        <rect x="80" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="130" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="180" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="230" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="280" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <text x="97" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">1</text>
-                        <text x="147" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">2</text>
-                        <text x="197" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">3</text>
-                        <text x="247" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">4</text>
-                        <text x="297" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">5</text>
-                    </svg>
-                `;
+                svgImg = `<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:10px;"><rect x="10" y="10" width="480" height="280" rx="12" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/><rect x="40" y="40" width="420" height="220" rx="6" fill="#fff" stroke="#6c7a8a" stroke-width="2"/><rect x="60" y="60" width="380" height="180" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/><text x="250" y="125" font-size="24" fill="#1e2a3a" text-anchor="middle" font-weight="700">VEKA Softline 70</text><text x="250" y="160" font-size="16" fill="#6c7a8a" text-anchor="middle">5-камерный профиль</text><text x="250" y="190" font-size="14" fill="#adb5bd" text-anchor="middle">Монтажная ширина 70 мм</text><line x1="40" y1="30" x2="40" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/><line x1="460" y1="30" x2="460" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/><text x="20" y="160" font-size="14" fill="#1e7e34" font-weight="600" transform="rotate(-90,20,160)">70 мм</text><rect x="80" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="130" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="180" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="230" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="280" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><text x="97" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">1</text><text x="147" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">2</text><text x="197" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">3</text><text x="247" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">4</text><text x="297" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">5</text></svg>`;
             } else if (seriesKey === 'softline82') {
-                svgImg = `
-                    <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:10px;">
-                        <rect x="10" y="10" width="480" height="280" rx="12" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/>
-                        <rect x="30" y="30" width="440" height="240" rx="6" fill="#fff" stroke="#6c7a8a" stroke-width="2"/>
-                        <rect x="50" y="50" width="400" height="200" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
-                        <text x="250" y="120" font-size="24" fill="#1e2a3a" text-anchor="middle" font-weight="700">VEKA Softline 82</text>
-                        <text x="250" y="155" font-size="16" fill="#6c7a8a" text-anchor="middle">6-7-камерный профиль</text>
-                        <text x="250" y="185" font-size="14" fill="#adb5bd" text-anchor="middle">Монтажная ширина 82 мм</text>
-                        <line x1="30" y1="30" x2="30" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/>
-                        <line x1="470" y1="30" x2="470" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/>
-                        <text x="15" y="160" font-size="14" fill="#1e7e34" font-weight="600" transform="rotate(-90,15,160)">82 мм</text>
-                        <rect x="70" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="115" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="160" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="205" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="250" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="295" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <rect x="340" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/>
-                        <text x="85" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">1</text>
-                        <text x="130" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">2</text>
-                        <text x="175" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">3</text>
-                        <text x="220" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">4</text>
-                        <text x="265" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">5</text>
-                        <text x="310" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">6</text>
-                        <text x="355" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">7</text>
-                    </svg>
-                `;
+                svgImg = `<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:10px;"><rect x="10" y="10" width="480" height="280" rx="12" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/><rect x="30" y="30" width="440" height="240" rx="6" fill="#fff" stroke="#6c7a8a" stroke-width="2"/><rect x="50" y="50" width="400" height="200" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/><text x="250" y="120" font-size="24" fill="#1e2a3a" text-anchor="middle" font-weight="700">VEKA Softline 82</text><text x="250" y="155" font-size="16" fill="#6c7a8a" text-anchor="middle">6-7-камерный профиль</text><text x="250" y="185" font-size="14" fill="#adb5bd" text-anchor="middle">Монтажная ширина 82 мм</text><line x1="30" y1="30" x2="30" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/><line x1="470" y1="30" x2="470" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/><text x="15" y="160" font-size="14" fill="#1e7e34" font-weight="600" transform="rotate(-90,15,160)">82 мм</text><rect x="70" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="115" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="160" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="205" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="250" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="295" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="340" y="70" width="30" height="160" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><text x="85" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">1</text><text x="130" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">2</text><text x="175" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">3</text><text x="220" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">4</text><text x="265" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">5</text><text x="310" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">6</text><text x="355" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">7</text></svg>`;
+            } else if (seriesKey === 'whs60') {
+                svgImg = `<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:10px;"><rect x="10" y="10" width="480" height="280" rx="12" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/><rect x="45" y="45" width="410" height="210" rx="6" fill="#fff" stroke="#6c7a8a" stroke-width="2"/><rect x="65" y="65" width="370" height="170" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/><text x="250" y="130" font-size="22" fill="#1e2a3a" text-anchor="middle" font-weight="700">WHS Halo 60</text><text x="250" y="165" font-size="16" fill="#6c7a8a" text-anchor="middle">4-камерный профиль</text><text x="250" y="195" font-size="14" fill="#adb5bd" text-anchor="middle">Монтажная ширина 60 мм</text><line x1="45" y1="30" x2="45" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/><line x1="455" y1="30" x2="455" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/><text x="25" y="160" font-size="14" fill="#1e7e34" font-weight="600" transform="rotate(-90,25,160)">60 мм</text><rect x="85" y="85" width="35" height="130" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="135" y="85" width="35" height="130" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="185" y="85" width="35" height="130" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="235" y="85" width="35" height="130" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><text x="102" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">1</text><text x="152" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">2</text><text x="202" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">3</text><text x="252" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">4</text></svg>`;
+            } else if (seriesKey === 'whs72') {
+                svgImg = `<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;border-radius:10px;"><rect x="10" y="10" width="480" height="280" rx="12" fill="#e9ecef" stroke="#adb5bd" stroke-width="2"/><rect x="40" y="40" width="420" height="220" rx="6" fill="#fff" stroke="#6c7a8a" stroke-width="2"/><rect x="60" y="60" width="380" height="180" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/><text x="250" y="125" font-size="22" fill="#1e2a3a" text-anchor="middle" font-weight="700">WHS Halo 72</text><text x="250" y="160" font-size="16" fill="#6c7a8a" text-anchor="middle">5-камерный профиль</text><text x="250" y="190" font-size="14" fill="#adb5bd" text-anchor="middle">Монтажная ширина 72 мм</text><line x1="40" y1="30" x2="40" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/><line x1="460" y1="30" x2="460" y2="270" stroke="#1e7e34" stroke-width="3" stroke-dasharray="6,4"/><text x="20" y="160" font-size="14" fill="#1e7e34" font-weight="600" transform="rotate(-90,20,160)">72 мм</text><rect x="80" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="130" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="180" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="230" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><rect x="280" y="80" width="35" height="140" rx="4" fill="#e9ecef" stroke="#adb5bd" stroke-width="1"/><text x="97" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">1</text><text x="147" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">2</text><text x="197" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">3</text><text x="247" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">4</text><text x="297" y="160" font-size="10" fill="#6c7a8a" text-anchor="middle">5</text></svg>`;
             }
 
             body.innerHTML = `
@@ -693,7 +703,6 @@
                 <ul>
                     ${charsHtml}
                 </ul>
-                <p style="font-size:1.1rem; font-weight:700; color:#1e7e34; margin-top:15px;">${data.price}</p>
                 <div class="btn-group">
                     <a href="#form" class="btn" onclick="closeModal()">Получить консультацию</a>
                     <a href="tel:+74959791001" class="btn btn-outline">Позвонить</a>
