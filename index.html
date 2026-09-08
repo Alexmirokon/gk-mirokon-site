@@ -27,10 +27,6 @@ html
             text-decoration: none;
             color: inherit;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
         .btn {
             display: inline-block;
             padding: 14px 32px;
@@ -54,6 +50,10 @@ html
             background: #fff;
             color: #1e7e34;
         }
+        .btn-small {
+            padding: 8px 20px;
+            font-size: 0.85rem;
+        }
         .section-title {
             font-size: 2.2rem;
             font-weight: 700;
@@ -62,6 +62,9 @@ html
         }
         .section-title span {
             color: #1e7e34;
+        }
+        html {
+            scroll-behavior: smooth;
         }
 
         /* ===== ШАПКА ===== */
@@ -104,6 +107,12 @@ html
         }
         .nav a:hover {
             color: #1e7e34;
+        }
+        .nav a.active {
+            color: #1e7e34;
+            font-weight: 700;
+            border-bottom: 3px solid #1e7e34;
+            padding-bottom: 5px;
         }
         .header-phone {
             font-weight: 700;
@@ -194,6 +203,11 @@ html
             color: #5a6a7a;
             font-size: 0.95rem;
         }
+        .service-card .btn {
+            margin-top: 15px;
+            padding: 10px 24px;
+            font-size: 0.9rem;
+        }
 
         /* ===== ПРОФИЛИ ===== */
         .profiles {
@@ -213,6 +227,15 @@ html
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             font-weight: 600;
             font-size: 1.2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .profile-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .profile-item a {
+            display: block;
+            color: inherit;
         }
         .profile-item small {
             display: block;
@@ -220,6 +243,9 @@ html
             font-size: 0.85rem;
             color: #6c7a8a;
             margin-top: 5px;
+        }
+        .profile-item .btn-small {
+            margin-top: 12px;
         }
 
         /* ===== ЦЕНЫ ===== */
@@ -455,35 +481,35 @@ html
             </div>
             <button class="burger" id="burgerBtn">☰</button>
             <nav class="nav" id="mainNav">
-                <a href="#">Главная</a>
-                <a href="#">Услуги</a>
-                <a href="#">Профили</a>
-                <a href="#">Цены</a>
-                <a href="#">Отзывы</a>
-                <a href="#">Контакты</a>
+                <a href="index.html">Главная</a>
+                <a href="#services">Услуги</a>
+                <a href="#profiles">Профили</a>
+                <a href="#prices">Цены</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contacts">Контакты</a>
             </nav>
             <div class="header-phone">
-                +7 (495) 979-10-01
+                <a href="tel:+74959791001">+7 (495) 979-10-01</a>
                 <small>Ежедневно с 10 до 20</small>
             </div>
         </div>
     </header>
 
-    <!-- ===== ГЕРОЙ ===== -->
-    <section class="hero">
+    <!-- ===== ГЕРОЙ (ГЛАВНАЯ) ===== -->
+    <section class="hero" id="home">
         <div class="container">
             <div class="hero-badge">🔹 Бесплатный замер</div>
             <h1>Остекление окон и балконов <br/><span>под ключ</span> в Королеве</h1>
-            <p>Профили VEKA, REHAU, SALAMANDER. Монтаж за 1 день. Гарантия 5 лет. Москитная сетка в подарок!</p>
+            <p>Профили VEKA, REHAU, KBE, NOVOTEX. Монтаж за 1 день. Гарантия 5 лет. Москитная сетка в подарок!</p>
             <div class="btn-group">
-                <a href="#" class="btn">Заказать звонок</a>
-                <a href="#" class="btn btn-outline">Рассчитать стоимость</a>
+                <a href="#form" class="btn">Заказать звонок</a>
+                <a href="https://wa.me/79057624043?text=Здравствуйте! Хочу рассчитать стоимость остекления." target="_blank" class="btn btn-outline">Рассчитать стоимость</a>
             </div>
         </div>
     </section>
 
     <!-- ===== УСЛУГИ ===== -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <h2 class="section-title">Наши <span>услуги</span></h2>
             <div class="services-grid">
@@ -491,42 +517,69 @@ html
                     <div class="icon">🪟</div>
                     <h3>Установка окон</h3>
                     <p>Пластиковые, алюминиевые, деревянные окна под ваш размер. Полный цикл — от замера до монтажа.</p>
+                    <a href="https://gk-mirokon.ru/profile" target="_blank" class="btn">Подробнее</a>
                 </div>
                 <div class="service-card">
                     <div class="icon">🔧</div>
                     <h3>Ремонт и регулировка</h3>
                     <p>Устраняем продувание, заменяем уплотнитель, регулируем фурнитуру. Выезд мастера.</p>
+                    <a href="https://gk-mirokon.ru/repair" target="_blank" class="btn">Подробнее</a>
                 </div>
                 <div class="service-card">
                     <div class="icon">🦟</div>
                     <h3>Москитные сетки</h3>
                     <p>Антикошка, антипыль, плиссе. Любые размеры и цвета. Установка за день.</p>
+                    <a href="https://gk-mirokon.ru/mosquitonets" target="_blank" class="btn">Подробнее</a>
                 </div>
                 <div class="service-card">
                     <div class="icon">🚪</div>
                     <h3>Раздвижные двери</h3>
                     <p>Межкомнатные и балконные перегородки. Стекло, зеркало, МДФ — на ваш вкус.</p>
+                    <a href="https://gk-mirokon.ru/slidingdoors" target="_blank" class="btn">Подробнее</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== ПРОФИЛИ ===== -->
-    <section class="profiles">
+    <!-- ===== ПРОФИЛИ (ССЫЛКИ НА ОТДЕЛЬНЫЕ СТРАНИЦЫ) ===== -->
+    <section class="profiles" id="profiles">
         <div class="container">
             <h2 class="section-title">Популярные <span>профили</span></h2>
             <div class="profiles-grid">
-                <div class="profile-item">VEKA <small>немецкое качество</small></div>
-                <div class="profile-item">REHAU <small>инновации</small></div>
-                <div class="profile-item">SALAMANDER <small>премиум-класс</small></div>
-                <div class="profile-item">KBE <small>надёжность</small></div>
-                <div class="profile-item">NOVOTEX <small>доступная цена</small></div>
+                <div class="profile-item">
+                    <a href="profile-veka.html">
+                        VEKA
+                        <small>немецкое качество</small>
+                        <span class="btn btn-small">Подробнее →</span>
+                    </a>
+                </div>
+                <div class="profile-item">
+                    <a href="profile-rehau.html">
+                        REHAU
+                        <small>инновации</small>
+                        <span class="btn btn-small">Подробнее →</span>
+                    </a>
+                </div>
+                <div class="profile-item">
+                    <a href="profile-kbe.html">
+                        KBE
+                        <small>надёжность</small>
+                        <span class="btn btn-small">Подробнее →</span>
+                    </a>
+                </div>
+                <div class="profile-item">
+                    <a href="profile-novotex.html">
+                        NOVOTEX
+                        <small>доступная цена</small>
+                        <span class="btn btn-small">Подробнее →</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ===== ЦЕНЫ ===== -->
-    <section class="prices">
+    <section class="prices" id="prices">
         <div class="container">
             <h2 class="section-title">Цены на <span>окна</span></h2>
             <div class="prices-grid">
@@ -576,7 +629,7 @@ html
     </section>
 
     <!-- ===== ОТЗЫВЫ ===== -->
-    <section class="reviews">
+    <section class="reviews" id="reviews">
         <div class="container">
             <h2 class="section-title">Что говорят <span>наши клиенты</span></h2>
             <div class="reviews-grid">
@@ -623,20 +676,20 @@ html
     </section>
 
     <!-- ===== ФОРМА ЗАЯВКИ ===== -->
-    <section class="form-section">
+    <section class="form-section" id="form">
         <div class="container">
             <h2>Бесплатный замер <br/>и консультация</h2>
             <p>Оставьте номер — и наш мастер приедет в удобное для вас время</p>
-            <form class="form-wrap" onsubmit="alert('Спасибо! Мы свяжемся с вами в ближайшее время.'); return false;">
-                <input type="text" placeholder="Ваше имя" required />
-                <input type="tel" placeholder="+7 (___ ) ___ - __ - __" required />
+            <form class="form-wrap" action="https://formsubmit.co/gk.mirokon@mail.ru" method="POST">
+                <input type="text" name="name" placeholder="Ваше имя" required />
+                <input type="tel" name="phone" placeholder="+7 (___ ) ___ - __ - __" required />
                 <button type="submit">Заказать звонок</button>
             </form>
         </div>
     </section>
 
-    <!-- ===== ПОДВАЛ ===== -->
-    <footer class="footer">
+    <!-- ===== ПОДВАЛ (КОНТАКТЫ) ===== -->
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="footer-inner">
                 <div>
@@ -665,6 +718,13 @@ html
     <script>
         document.getElementById('burgerBtn').addEventListener('click', function() {
             document.getElementById('mainNav').classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.nav a').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
         });
     </script>
 
